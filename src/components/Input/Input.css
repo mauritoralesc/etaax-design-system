@@ -8,18 +8,22 @@
 .input-label {
   font-size: var(--ds-font-size-sm);
   font-weight: var(--ds-font-weight-medium);
+  letter-spacing: var(--ds-tracking-sm);
+  line-height: var(--ds-line-height-sm);
   color: var(--ds-color-text);
 }
 
 .input-field {
   font-family: inherit;
   font-size: var(--ds-font-size-md);
+  letter-spacing: var(--ds-tracking-md);
+  line-height: var(--ds-line-height-md);
   color: var(--ds-color-text);
   background-color: var(--ds-color-surface);
   border: 1px solid var(--ds-color-border);
   border-radius: var(--ds-radius-md);
-  padding: var(--ds-space-2) var(--ds-space-3);
-  height: 2.5rem;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  height: 2.75rem;
   transition:
     border-color var(--ds-duration-fast) var(--ds-easing-standard),
     box-shadow var(--ds-duration-fast) var(--ds-easing-standard);
@@ -46,10 +50,14 @@
 
 .input-hint {
   font-size: var(--ds-font-size-xs);
+  letter-spacing: var(--ds-tracking-xs);
+  line-height: var(--ds-line-height-xs);
   color: var(--ds-color-text-muted);
 }
 
 .input-error {
   font-size: var(--ds-font-size-xs);
+  letter-spacing: var(--ds-tracking-xs);
+  line-height: var(--ds-line-height-xs);
   color: var(--ds-color-danger-600);
 }

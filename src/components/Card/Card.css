@@ -5,7 +5,7 @@
   background-color: var(--ds-color-surface);
   border: 1px solid var(--ds-color-border);
   border-radius: var(--ds-radius-lg);
-  box-shadow: var(--ds-shadow-sm);
+  box-shadow: var(--ds-shadow-md);
   padding: var(--ds-space-6);
   font-family: var(--ds-font-family-sans);
 }
@@ -19,18 +19,24 @@
 .card-title {
   font-size: var(--ds-font-size-lg);
   font-weight: var(--ds-font-weight-semibold);
+  letter-spacing: var(--ds-tracking-lg);
+  line-height: var(--ds-line-height-lg);
   color: var(--ds-color-text);
   margin: 0;
 }
 
 .card-subtitle {
   font-size: var(--ds-font-size-sm);
+  letter-spacing: var(--ds-tracking-sm);
+  line-height: var(--ds-line-height-sm);
   color: var(--ds-color-text-muted);
   margin: 0;
 }
 
 .card-body {
   font-size: var(--ds-font-size-md);
+  letter-spacing: var(--ds-tracking-md);
+  line-height: var(--ds-line-height-md);
   color: var(--ds-color-text);
 }
 

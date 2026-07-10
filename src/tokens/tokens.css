@@ -1,36 +1,36 @@
 :root {
-  /* Color — brand */
-  --ds-color-brand-50: #eff6ff;
-  --ds-color-brand-100: #dbeafe;
-  --ds-color-brand-200: #bfdbfe;
-  --ds-color-brand-300: #93c5fd;
-  --ds-color-brand-400: #60a5fa;
-  --ds-color-brand-500: #3b82f6;
-  --ds-color-brand-600: #2563eb;
-  --ds-color-brand-700: #1d4ed8;
-  --ds-color-brand-800: #1e40af;
-  --ds-color-brand-900: #1e3a8a;
+  /* Color — brand (system blue) */
+  --ds-color-brand-50: #eef6ff;
+  --ds-color-brand-100: #dcedff;
+  --ds-color-brand-200: #b6ddff;
+  --ds-color-brand-300: #84c5ff;
+  --ds-color-brand-400: #4da7ff;
+  --ds-color-brand-500: #0a84ff;
+  --ds-color-brand-600: #007aff;
+  --ds-color-brand-700: #0062cc;
+  --ds-color-brand-800: #004c9e;
+  --ds-color-brand-900: #003b7a;
 
-  /* Color — neutral */
+  /* Color — neutral (system gray) */
   --ds-color-neutral-0: #ffffff;
-  --ds-color-neutral-50: #f8fafc;
-  --ds-color-neutral-100: #f1f5f9;
-  --ds-color-neutral-200: #e2e8f0;
-  --ds-color-neutral-300: #cbd5e1;
-  --ds-color-neutral-400: #94a3b8;
-  --ds-color-neutral-500: #64748b;
-  --ds-color-neutral-600: #475569;
-  --ds-color-neutral-700: #334155;
-  --ds-color-neutral-800: #1e293b;
-  --ds-color-neutral-900: #0f172a;
+  --ds-color-neutral-50: #f5f5f7;
+  --ds-color-neutral-100: #f2f2f7;
+  --ds-color-neutral-200: #e5e5ea;
+  --ds-color-neutral-300: #d1d1d6;
+  --ds-color-neutral-400: #c7c7cc;
+  --ds-color-neutral-500: #aeaeb2;
+  --ds-color-neutral-600: #8e8e93;
+  --ds-color-neutral-700: #6e6e73;
+  --ds-color-neutral-800: #3a3a3c;
+  --ds-color-neutral-900: #1d1d1f;
 
-  /* Color — feedback */
-  --ds-color-success-500: #22c55e;
-  --ds-color-success-600: #16a34a;
-  --ds-color-warning-500: #f59e0b;
-  --ds-color-warning-600: #d97706;
-  --ds-color-danger-500: #ef4444;
-  --ds-color-danger-600: #dc2626;
+  /* Color — feedback (system colors) */
+  --ds-color-success-500: #34c759;
+  --ds-color-success-600: #248a3d;
+  --ds-color-warning-500: #ff9500;
+  --ds-color-warning-600: #c93400;
+  --ds-color-danger-500: #ff3b30;
+  --ds-color-danger-600: #d70015;
 
   /* Color — semantic (light theme) */
   --ds-color-bg: var(--ds-color-neutral-0);
@@ -38,7 +38,7 @@
   --ds-color-surface: var(--ds-color-neutral-0);
   --ds-color-border: var(--ds-color-neutral-200);
   --ds-color-text: var(--ds-color-neutral-900);
-  --ds-color-text-muted: var(--ds-color-neutral-500);
+  --ds-color-text-muted: var(--ds-color-neutral-700);
   --ds-color-text-on-brand: var(--ds-color-neutral-0);
 
   --ds-color-primary: var(--ds-color-brand-600);
@@ -47,8 +47,9 @@
 
   /* Typography */
   --ds-font-family-sans:
-    'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-  --ds-font-family-mono: 'SFMono-Regular', ui-monospace, Menlo, monospace;
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, Helvetica, Arial,
+    system-ui, sans-serif;
+  --ds-font-family-mono: 'SF Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   --ds-font-size-xs: 0.75rem;
   --ds-font-size-sm: 0.875rem;
@@ -62,6 +63,26 @@
   --ds-font-weight-medium: 500;
   --ds-font-weight-semibold: 600;
   --ds-font-weight-bold: 700;
+
+  /* Tracking (letter-spacing) — negative as text grows, near-zero at body,
+     slightly positive at caption sizes. Never one fixed value for all sizes. */
+  --ds-tracking-xs: 0.005em;
+  --ds-tracking-sm: 0em;
+  --ds-tracking-md: -0.006em;
+  --ds-tracking-lg: -0.011em;
+  --ds-tracking-xl: -0.014em;
+  --ds-tracking-2xl: -0.017em;
+  --ds-tracking-3xl: -0.021em;
+
+  /* Leading (line-height) — tracks size inversely: tight on large display
+     text, looser on small/body copy. */
+  --ds-line-height-3xl: 1.1;
+  --ds-line-height-2xl: 1.2;
+  --ds-line-height-xl: 1.25;
+  --ds-line-height-lg: 1.3;
+  --ds-line-height-md: 1.4;
+  --ds-line-height-sm: 1.45;
+  --ds-line-height-xs: 1.5;
 
   --ds-line-height-tight: 1.25;
   --ds-line-height-normal: 1.5;
@@ -80,36 +101,94 @@
   --ds-space-12: 3rem;
   --ds-space-16: 4rem;
 
-  /* Radius */
-  --ds-radius-sm: 0.25rem;
-  --ds-radius-md: 0.5rem;
-  --ds-radius-lg: 0.75rem;
+  /* Radius — generous and continuous-feeling, the way Apple's rounded
+     rects read (full pill for pill-shaped controls). */
+  --ds-radius-sm: 0.5rem;
+  --ds-radius-md: 0.75rem;
+  --ds-radius-lg: 1.25rem;
   --ds-radius-full: 9999px;
 
-  /* Shadow */
-  --ds-shadow-sm: 0 1px 2px 0 rgb(15 23 42 / 0.06);
-  --ds-shadow-md: 0 4px 6px -1px rgb(15 23 42 / 0.1), 0 2px 4px -2px rgb(15 23 42 / 0.06);
-  --ds-shadow-lg: 0 10px 15px -3px rgb(15 23 42 / 0.1), 0 4px 6px -4px rgb(15 23 42 / 0.06);
+  /* Shadow — soft and diffuse rather than sharp-edged, tinted with the
+     content color instead of flat black. */
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.04), 0 1px 1px rgb(0 0 0 / 0.03);
+  --ds-shadow-md: 0 2px 8px rgb(0 0 0 / 0.06), 0 8px 16px rgb(0 0 0 / 0.04);
+  --ds-shadow-lg: 0 4px 16px rgb(0 0 0 / 0.08), 0 16px 32px rgb(0 0 0 / 0.06);
 
-  /* Focus ring */
-  --ds-focus-ring: 0 0 0 3px var(--ds-color-brand-200);
+  /* Focus ring — a halo with a small gap from the control edge, like
+     macOS/iOS focus, rather than a ring flush against the border. */
+  --ds-focus-ring:
+    0 0 0 2px var(--ds-color-bg), 0 0 0 6px color-mix(in srgb, var(--ds-color-primary) 45%, transparent);
 
-  /* Motion */
-  --ds-duration-fast: 120ms;
-  --ds-duration-normal: 200ms;
-  --ds-easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Motion — critically-damped-feeling ease by default; reserve the
+     bounce for momentum-driven, gesture-originated motion. Instant
+     feedback lives on press (100ms), not on release. */
+  --ds-duration-instant: 100ms;
+  --ds-duration-fast: 150ms;
+  --ds-duration-normal: 250ms;
+  --ds-easing-standard: cubic-bezier(0.32, 0.72, 0, 1);
+  --ds-easing-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Press feedback scale — components use this instead of a hardcoded
+     transform so reduced-motion can neutralize it in one place. */
+  --ds-scale-press: 0.97;
 }
 
 [data-theme='dark'] {
-  --ds-color-bg: var(--ds-color-neutral-900);
-  --ds-color-bg-subtle: var(--ds-color-neutral-800);
-  --ds-color-surface: var(--ds-color-neutral-800);
-  --ds-color-border: var(--ds-color-neutral-700);
+  --ds-color-bg: #000000;
+  --ds-color-bg-subtle: #1c1c1e;
+  --ds-color-surface: #1c1c1e;
+  --ds-color-border: #38383a;
   --ds-color-text: var(--ds-color-neutral-50);
-  --ds-color-text-muted: var(--ds-color-neutral-400);
+  --ds-color-text-muted: #98989d;
   --ds-color-text-on-brand: var(--ds-color-neutral-0);
 
   --ds-color-primary: var(--ds-color-brand-500);
   --ds-color-primary-hover: var(--ds-color-brand-400);
   --ds-color-primary-active: var(--ds-color-brand-300);
+
+  --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.24);
+  --ds-shadow-md: 0 2px 8px rgb(0 0 0 / 0.32), 0 8px 16px rgb(0 0 0 / 0.2);
+  --ds-shadow-lg: 0 4px 16px rgb(0 0 0 / 0.4), 0 16px 32px rgb(0 0 0 / 0.28);
+}
+
+/* Respect the OS appearance automatically when no explicit theme is set;
+   an explicit data-theme still wins either direction. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --ds-color-bg: #000000;
+    --ds-color-bg-subtle: #1c1c1e;
+    --ds-color-surface: #1c1c1e;
+    --ds-color-border: #38383a;
+    --ds-color-text: var(--ds-color-neutral-50);
+    --ds-color-text-muted: #98989d;
+    --ds-color-text-on-brand: var(--ds-color-neutral-0);
+
+    --ds-color-primary: var(--ds-color-brand-500);
+    --ds-color-primary-hover: var(--ds-color-brand-400);
+    --ds-color-primary-active: var(--ds-color-brand-300);
+
+    --ds-shadow-sm: 0 1px 2px rgb(0 0 0 / 0.24);
+    --ds-shadow-md: 0 2px 8px rgb(0 0 0 / 0.32), 0 8px 16px rgb(0 0 0 / 0.2);
+    --ds-shadow-lg: 0 4px 16px rgb(0 0 0 / 0.4), 0 16px 32px rgb(0 0 0 / 0.28);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --ds-duration-instant: 80ms;
+    --ds-duration-fast: 80ms;
+    --ds-duration-normal: 80ms;
+    --ds-easing-spring: cubic-bezier(0.32, 0.72, 0, 1);
+    --ds-scale-press: 1;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --ds-color-border: var(--ds-color-neutral-900);
+  }
+
+  [data-theme='dark'] {
+    --ds-color-border: var(--ds-color-neutral-50);
+  }
 }

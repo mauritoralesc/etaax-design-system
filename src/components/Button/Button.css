@@ -4,16 +4,23 @@
   justify-content: center;
   gap: var(--ds-space-2);
   font-family: var(--ds-font-family-sans);
-  font-weight: var(--ds-font-weight-medium);
+  font-weight: var(--ds-font-weight-semibold);
   line-height: var(--ds-line-height-tight);
-  border-radius: var(--ds-radius-md);
+  border-radius: var(--ds-radius-full);
   border: 1px solid transparent;
   cursor: pointer;
   transition:
     background-color var(--ds-duration-fast) var(--ds-easing-standard),
     border-color var(--ds-duration-fast) var(--ds-easing-standard),
-    color var(--ds-duration-fast) var(--ds-easing-standard);
+    color var(--ds-duration-fast) var(--ds-easing-standard),
+    box-shadow var(--ds-duration-fast) var(--ds-easing-standard),
+    transform var(--ds-duration-instant) var(--ds-easing-standard);
   white-space: nowrap;
+}
+
+/* Feedback on press, not on release — the instant the pointer goes down. */
+.button-root:not(:disabled):active {
+  transform: scale(var(--ds-scale-press));
 }
 
 .button-root:focus-visible {
@@ -29,20 +36,23 @@
 /* Sizes */
 .button-sm {
   font-size: var(--ds-font-size-sm);
-  padding: var(--ds-space-1) var(--ds-space-3);
-  height: 2rem;
+  letter-spacing: var(--ds-tracking-sm);
+  padding: var(--ds-space-1) var(--ds-space-4);
+  height: 2.25rem;
 }
 
 .button-md {
   font-size: var(--ds-font-size-md);
-  padding: var(--ds-space-2) var(--ds-space-4);
-  height: 2.5rem;
+  letter-spacing: var(--ds-tracking-md);
+  padding: var(--ds-space-2) var(--ds-space-5);
+  height: 2.75rem;
 }
 
 .button-lg {
   font-size: var(--ds-font-size-lg);
-  padding: var(--ds-space-3) var(--ds-space-5);
-  height: 3rem;
+  letter-spacing: var(--ds-tracking-lg);
+  padding: var(--ds-space-3) var(--ds-space-6);
+  height: 3.25rem;
 }
 
 /* Variants */
