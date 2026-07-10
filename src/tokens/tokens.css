@@ -1,15 +1,15 @@
 :root {
-  /* Color — brand (system blue) */
-  --ds-color-brand-50: #eef6ff;
-  --ds-color-brand-100: #dcedff;
-  --ds-color-brand-200: #b6ddff;
-  --ds-color-brand-300: #84c5ff;
-  --ds-color-brand-400: #4da7ff;
-  --ds-color-brand-500: #0a84ff;
-  --ds-color-brand-600: #007aff;
-  --ds-color-brand-700: #0062cc;
-  --ds-color-brand-800: #004c9e;
-  --ds-color-brand-900: #003b7a;
+  /* Color — brand (sage green) */
+  --ds-color-brand-50: #eaf4ec;
+  --ds-color-brand-100: #dfede2;
+  --ds-color-brand-200: #c8decc;
+  --ds-color-brand-300: #aacab0;
+  --ds-color-brand-400: #8bb292;
+  --ds-color-brand-500: #65956e;
+  --ds-color-brand-600: #628e6a;
+  --ds-color-brand-700: #4a7351;
+  --ds-color-brand-800: #355a3c;
+  --ds-color-brand-900: #25462b;
 
   /* Color — neutral (system gray) */
   --ds-color-neutral-0: #ffffff;
